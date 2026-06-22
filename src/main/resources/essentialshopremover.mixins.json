@@ -1,0 +1,25 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "net.mc_orion.essentialshopremover.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "cosmetics.CosmeticsRenderStateLiveMixin",
+    "essentials.FullRightSideBarOldMixin",
+    "essentials.LeftSideBarMixin",
+    "gui.CoinsPurchaseModalMixin",
+    "gui.EmoteWheelMixin",
+    "gui.PauseScreenMixin",
+    "gui.PurchaseFlowMixin",
+    "gui.TitleScreenMixin",
+    "gui.WardrobeMixin",
+    "network.CoinsManagerMixin",
+    "network.ConnectionManagerMixin",
+    "notices.NoticeBannerManagerMixin",
+    "notices.SaleNoticeManagerMixin",
+    "notices.CosmeticNoticesMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 0
+  }
+}
