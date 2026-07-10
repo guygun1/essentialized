@@ -1,6 +1,6 @@
-# Essential Shop Remover
+# Essentials Essentialized
 
-A client-side NeoForge mod that disables the shop, cosmetics, and emote features from the [Essential mod](https://essential.gg). All features are toggleable via config.
+A client-side Minecraft mod that disables the shop, cosmetics, and emote features from the [Essential mod](https://essential.gg). Supports both **NeoForge** and **Fabric**. All features are toggleable via config.
 
 ## Features
 
@@ -13,10 +13,11 @@ A client-side NeoForge mod that disables the shop, cosmetics, and emote features
 - **Blocks wardrobe nag modals** -- The "unowned items equipped" warning is removed.
 - **Coins purchase modal** -- The coin purchase dialog is blocked from opening.
 - **Removes menu buttons** -- Essential's buttons are removed from the main menu and pause menu.
+- **Removes social features** (optional) -- Chat, friends, world hosting, and invite features can be disabled.
 
 ## Configuration
 
-All features are controlled via `config/essentialshopremover.json`. Set any option to `false` to re-enable that feature.
+All features are controlled via `config/essentialized.json`. Set any option to `false` to re-enable that feature.
 
 ```json
 {
@@ -28,7 +29,8 @@ All features are controlled via `config/essentialshopremover.json`. Set any opti
   "blockNotices": true,
   "blockWardrobeNag": true,
   "removeMainMenuButtons": true,
-  "removePauseMenuButtons": true
+  "removePauseMenuButtons": true,
+  "removeSocialFeatures": false
 }
 ```
 
@@ -43,6 +45,13 @@ All features are controlled via `config/essentialshopremover.json`. Set any opti
 | `blockWardrobeNag` | `true` | Removes the "unowned items" wardrobe warning |
 | `removeMainMenuButtons` | `true` | Removes Essential buttons from the title screen |
 | `removePauseMenuButtons` | `true` | Removes Essential buttons from the pause menu |
+| `removeSocialFeatures` | `false` | Removes Essential social features (chat, friends, world hosting, invite) |
+
+### Config GUI
+
+If [Cloth Config](https://modrinth.com/mod/cloth-config) is installed, a nice settings screen is available:
+- **NeoForge**: Accessible via the mod list or Mods button
+- **Fabric**: Accessible via [ModMenu](https://modrinth.com/mod/modmenu)
 
 ## How It Works
 
@@ -55,8 +64,27 @@ Essential's keybinds (Wardrobe, Emote Wheel, Toggle Cosmetics, etc.) still appea
 ## Dependencies
 
 - Minecraft 1.21.1
-- NeoForge 21.1.x
 - [Essential mod](https://essential.gg) (required at runtime)
+- [Cloth Config](https://modrinth.com/mod/cloth-config) (optional - provides config GUI)
+- [ModMenu](https://modrinth.com/mod/modmenu) (Fabric only - provides config screen access)
+
+### Mod Loaders
+
+- **NeoForge** 21.1.x
+- **Fabric** (via Fabric Loader 0.16.x)
+
+## Building
+
+```bash
+# Build all loaders
+./gradlew build
+
+# Build NeoForge only
+./gradlew :neoforge:build
+
+# Build Fabric only
+./gradlew :fabric:build
+```
 
 ## Legal Disclaimer
 
@@ -69,4 +97,3 @@ Essential is a closed-source mod by Spark Universe / ModCore Inc. This mod does 
 - Forge purchases or bypass account entitlements
 
 This mod interacts with Essential solely through Mixin, a standard Minecraft modding mechanism that intercepts method calls at runtime. All modifications are local and client-side. This approach is consistent with standard Minecraft modding practices and fair use principles. No Essential intellectual property is reproduced or distributed.
-

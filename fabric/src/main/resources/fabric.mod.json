@@ -1,0 +1,40 @@
+{
+    "schemaVersion": 1,
+    "id": "${mod_id}",
+    "version": "${version}",
+    "name": "${mod_name}",
+    "description": "${description}",
+    "authors": [
+        "${mod_author}"
+    ],
+    "contact": {
+        "homepage": "https://github.com/guygun1/essentialized",
+        "sources": "https://github.com/guygun1/essentialized"
+    },
+    "license": "${license}",
+    "icon": "${mod_id}.png",
+    "environment": "client",
+    "entrypoints": {
+        "client": [
+            "net.mc_orion.essentialized.EssentializedFabric"
+        ],
+        "modmenu": [
+            "net.mc_orion.essentialized.EssentializedModMenu"
+        ]
+    },
+    "mixins": [
+        "${mod_id}.mixins.json",
+        "${mod_id}.fabric.mixins.json"
+    ],
+    "depends": {
+        "fabricloader": ">=${fabric_loader_version}",
+        "fabric-api": "*",
+        "minecraft": "${minecraft_version}",
+        "java": ">=${java_version}",
+        "modmenu": "*"
+    },
+    "suggests": {
+        "essential": "*",
+        "cloth-config": "*"
+    }
+}

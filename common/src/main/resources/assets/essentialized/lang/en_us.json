@@ -1,0 +1,14 @@
+{
+  "title.essentialized.config": "Essentials Essentialized Settings",
+  "category.essentialized.general": "General",
+  "option.essentialized.blockCosmetics": "Block Cosmetic Rendering",
+  "option.essentialized.blockEmotes": "Block Emotes",
+  "option.essentialized.blockPurchases": "Block Purchases",
+  "option.essentialized.blockCoins": "Block Coins",
+  "option.essentialized.blockCheckoutPackets": "Block Checkout Packets",
+  "option.essentialized.blockNotices": "Block Notices",
+  "option.essentialized.blockWardrobeNag": "Block Wardrobe Nag",
+  "option.essentialized.removeMainMenuButtons": "Remove Main Menu Buttons",
+  "option.essentialized.removePauseMenuButtons": "Remove Pause Menu Buttons",
+  "option.essentialized.removeSocialFeatures": "Remove Social Features"
+}

@@ -1,0 +1,26 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "net.mc_orion.essentialized.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [],
+  "client": [
+    "TitleScreenMixin",
+    "PauseScreenMixin",
+    "cosmetics.CosmeticsRenderStateLiveMixin",
+    "essentials.FullRightSideBarOldMixin",
+    "essentials.LeftSideBarMixin",
+    "gui.CoinsPurchaseModalMixin",
+    "gui.EmoteWheelMixin",
+    "gui.PurchaseFlowMixin",
+    "gui.WardrobeMixin",
+    "network.CoinsManagerMixin",
+    "network.ConnectionManagerMixin",
+    "notices.CosmeticNoticesMixin",
+    "notices.NoticeBannerManagerMixin",
+    "notices.SaleNoticeManagerMixin"
+  ],
+  "injectors": {
+    "defaultRequire": 0
+  }
+}
